@@ -1,0 +1,1056 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <title>PALOMA BEAUTY</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PALOMA BEAUTY - Votre beauté, notre passion</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --rose-poudre: #F8D7E3;
+            --blanc: #FFFFFF;
+            --gris-doux: #F4F4F4;
+            --noir: #000000;
+            --or-rose: #C49B9B;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--noir);
+            line-height: 1.6;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+        }
+
+        /* Navigation */
+        nav {
+            background: var(--blanc);
+            padding: 1.5rem 5%;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--or-rose);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--noir);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--or-rose);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), 
+                        url('Gemini_Generated_Image_cdagmvcdagmvcdag.png');
+            background-size: cover;
+            background-position: center;
+            height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--blanc);
+        }
+
+        .hero-content h1 {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero-content p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background: var(--or-rose);
+            color: var(--blanc);
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background: #9e7e7e;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+
+        /* Sections */
+        section {
+            padding: 5rem 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: var(--or-rose);
+        }
+
+        /* Avantages */
+        .avantages {
+            background: var(--gris-doux);
+        }
+
+        .avantages-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .avantage-card {
+            background: var(--blanc);
+            padding: 2rem;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .avantage-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .avantage-card i {
+            font-size: 3rem;
+            color: var(--or-rose);
+            margin-bottom: 1rem;
+        }
+
+        .avantage-card h3 {
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        /* Services */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: var(--blanc);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .service-card:hover {
+            transform: scale(1.05);
+        }
+
+        .service-img {
+            width: 100%;
+            height: 250px;
+            background: linear-gradient(135deg, var(--rose-poudre), var(--or-rose));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .service-img i {
+            font-size: 5rem;
+            color: var(--blanc);
+        }
+
+        .service-content {
+            padding: 1.5rem;
+        }
+
+        .service-content h3 {
+            margin-bottom: 1rem;
+            color: var(--or-rose);
+        }
+
+        /* Page About */
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .about-img-1 {
+   
+            width: 100%;
+    height: 400px;
+    background-image: url('Gemini_Generated_Image_2k3p5i2k3p5i2k3p.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+       .about-img-2 {
+   
+            width: 100%;
+    height: 400px;
+    background-image: url('WhatsApp Image 2026-01-04 at 7.42.34 PM.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+        .about-img i {
+            font-size: 8rem;
+            color: var(--blanc);
+        }
+
+        .about-text h2 {
+            margin-bottom: 1.5rem;
+            color: var(--or-rose);
+        }
+
+        .about-text p {
+            margin-bottom: 1rem;
+            text-align: justify;
+        }
+
+        /* Gallery */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .gallery-item-1 {
+            height: 300px;
+            background: linear-gradient(135deg, var(--rose-poudre), var(--or-rose));
+            border-radius: 15px;
+            overflow: hidden;
+            position: relative;
+            cursor: pointer;
+            transition: transform 0.3s;
+            background-image: url('WhatsApp Image 2026-01-04 at 7.20.35 PM.jpeg');
+              background-size: cover;
+            background-position: center;
+        }
+
+        .gallery-item-1:hover {
+            transform: scale(1.05);
+        }
+
+        .gallery-item-1 i {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 4rem;
+            color: var(--blanc);
+        }
+          .gallery-item-2 {
+            height: 300px;
+            background: linear-gradient(135deg, var(--rose-poudre), var(--or-rose));
+            border-radius: 15px;
+            overflow: hidden;
+            position: relative;
+            cursor: pointer;
+            transition: transform 0.3s;
+            background-image: url('WhatsApp Image 2026-01-04 at 7.02.14 PM (1).jpeg');
+              background-size: cover;
+            background-position: center;
+        }
+
+        .gallery-item-2:hover {
+            transform: scale(1.05);
+        }
+
+        .gallery-item-2 i {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 4rem;
+            color: var(--blanc);
+        }
+          .gallery-item-3 {
+            height: 300px;
+            background: linear-gradient(135deg, var(--rose-poudre), var(--or-rose));
+            border-radius: 15px;
+            overflow: hidden;
+            position: relative;
+            cursor: pointer;
+            transition: transform 0.3s;
+            background-image: url('WhatsApp Image 2026-01-04 at 7.02.14 PM.jpeg');
+              background-size: cover;
+            background-position: center;
+        }
+
+        .gallery-item-3:hover {
+            transform: scale(1.05);
+        }
+
+        .gallery-item-3 i {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 4rem;
+            color: var(--blanc);
+        }
+          .gallery-item-4 {
+            height: 300px;
+            background: linear-gradient(135deg, var(--rose-poudre), var(--or-rose));
+            border-radius: 15px;
+            overflow: hidden;
+            position: relative;
+            cursor: pointer;
+            transition: transform 0.3s;
+            background-image: url('WhatsApp Image 2026-01-04 at 7.02.15 PM.jpeg');
+              background-size: cover;
+            background-position: center;
+        }
+
+        .gallery-item-4:hover {
+            transform: scale(1.05);
+        }
+
+        .gallery-item-4 i {
+            position:absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 4rem;
+            color: var(--blanc);
+        }
+          .gallery-item-5 {
+            height: 300px;
+            background: linear-gradient(135deg, var(--rose-poudre), var(--or-rose));
+            border-radius: 15px;
+            overflow: hidden;
+            position: relative;
+            cursor: pointer;
+            transition: transform 0.3s;
+            background-image: url('WhatsApp Image 2026-01-04 at 7.29.27 PM.jpeg');
+              background-size: cover;
+            background-position: center;
+        }
+
+        .gallery-item-5:hover {
+            transform: scale(1.05);
+        }
+
+        .gallery-item-5 i {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 4rem;
+            color: var(--blanc);
+        }
+          .gallery-item-6 {
+            height: 300px;
+            background: linear-gradient(135deg, var(--rose-poudre), var(--or-rose));
+            border-radius: 15px;
+            overflow: hidden;
+            position: relative;
+            cursor: pointer;
+            transition: transform 0.3s;
+            background-image: url('WhatsApp Image 2026-01-04 at 7.12.55 PM (1).jpeg');
+              background-size: cover;
+            background-position: center;
+        }
+
+        .gallery-item-6:hover {
+            transform: scale(1.05);
+        }
+
+        .gallery-item-6 i {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 4rem;
+            color: var(--blanc);
+        }
+          .gallery-item-7 {
+            height: 300px;
+            background: linear-gradient(135deg, var(--rose-poudre), var(--or-rose));
+            border-radius: 15px;
+            overflow: hidden;
+            position: relative;
+            cursor: pointer;
+            transition: transform 0.3s;
+            background-image: url('WhatsApp Image 2026-01-04 at 7.12.55 PM (2).jpeg');
+              background-size: cover;
+            background-position: center;
+        }
+
+        .gallery-item-7:hover {
+            transform: scale(1.05);
+        }
+
+        .gallery-item-7 i {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 4rem;
+            color: var(--blanc);
+        }
+          .gallery-item-8 {
+            height: 300px;
+            background: linear-gradient(135deg, var(--rose-poudre), var(--or-rose));
+            border-radius: 15px;
+            overflow: hidden;
+            position: relative;
+            cursor: pointer;
+            transition: transform 0.3s;
+            background-image: url('WhatsApp Image 2026-01-04 at 7.12.56 PM.jpeg');
+              background-size: cover;
+            background-position: center;
+        }
+
+        .gallery-item-8:hover {
+            transform: scale(1.05);
+        }
+
+        .gallery-item-8 i {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 4rem;
+            color: var(--blanc);
+        }
+          .gallery-item-9 {
+            height: 300px;
+            background: linear-gradient(135deg, var(--rose-poudre), var(--or-rose));
+            border-radius: 15px;
+            overflow: hidden;
+            position: relative;
+            cursor: pointer;
+            transition: transform 0.3s;
+            background-image: url('WhatsApp Image 2026-01-04 at 7.12.55 PM.jpeg');
+              background-size: cover;
+            background-position: center;
+        }
+
+        .gallery-item-9:hover {
+            transform: scale(1.05);
+        }
+
+        .gallery-item-9 i {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 4rem;
+            color: var(--blanc);
+        }
+
+        /* Contact Form */
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 1rem;
+            border: 2px solid var(--gris-doux);
+            border-radius: 10px;
+            font-family: 'Poppins', sans-serif;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--or-rose);
+        }
+
+        .contact-info {
+            background: var(--gris-doux);
+            padding: 2rem;
+            border-radius: 20px;
+        }
+
+        .contact-info h3 {
+            color: var(--or-rose);
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-item i {
+            font-size: 1.5rem;
+            color: var(--or-rose);
+            margin-right: 1rem;
+            width: 30px;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--noir);
+            color: var(--blanc);
+            padding: 3rem 5%;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .social-links a {
+            color: var(--blanc);
+            font-size: 1.8rem;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover {
+            color: var(--or-rose);
+        }
+
+        /* Pages */
+        .page-content {
+            display: none;
+        }
+
+        .page-content.active {
+            display: block;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .about-content,
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+
+            nav ul {
+                gap: 1rem;
+                font-size: 0.9rem;
+            }
+
+            .services-grid,
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Services détaillés */
+        .services-detail {
+            background: var(--gris-doux);
+            padding: 3rem 0;
+        }
+
+        .service-category {
+            background: var(--blanc);
+            padding: 2rem;
+            border-radius: 20px;
+            margin-bottom: 2rem;
+        }
+
+        .service-category h3 {
+            color: var(--or-rose);
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+        }
+
+        .service-list {
+            list-style: none;
+        }
+
+        .service-list li {
+            padding: 1rem;
+            border-bottom: 1px solid var(--gris-doux);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .service-list li:last-child {
+            border-bottom: none;
+        }
+
+        .service-price {
+            color: var(--or-rose);
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <div class="logo">PALOMA BEAUTY</div>
+            <ul>
+                <li><a href="#" onclick="showPage('home')">Accueil</a></li>
+                <li><a href="#" onclick="showPage('about')">À propos</a></li>
+                <li><a href="#" onclick="showPage('services')">Services</a></li>
+                <li><a href="#" onclick="showPage('gallery')">Galerie</a></li>
+                <li><a href="#" onclick="showPage('contact')">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- PAGE ACCUEIL -->
+    <div id="home" class="page-content active">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>PALOMA BEAUTY</h1>
+                <p>Votre beauté, notre passion.</p>
+                <a href="#" class="btn" onclick="showPage('contact')">Réserver maintenant</a>
+            </div>
+        </section>
+
+        <!-- Avantages -->
+        <section class="avantages">
+            <h2 class="section-title">Pourquoi nous choisir ?</h2>
+            <div class="avantages-grid">
+                <div class="avantage-card">
+                    <i class="fas fa-certificate"></i>
+                    <h3>Esthéticiennes certifiées</h3>
+                    <p>Notre équipe est formée aux dernières techniques de beauté</p>
+                </div>
+                <div class="avantage-card">
+                    <i class="fas fa-star"></i>
+                    <h3>Produits professionnels</h3>
+                    <p>Nous utilisons uniquement des produits haut de gamme</p>
+                </div>
+                <div class="avantage-card">
+                    <i class="fas fa-heart"></i>
+                    <h3>Hygiène et qualité</h3>
+                    <p>Respect strict des normes d'hygiène et de sécurité</p>
+                </div>
+                <div class="avantage-card">
+                    <i class="fas fa-check-circle"></i>
+                    <h3>Résultats garantis</h3>
+                    <p>Satisfaction client et résultats durables assurés</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services en vedette -->
+        <section>
+            <h2 class="section-title">Nos Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-img">
+                        <i class="fas fa-paint-brush"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Maquillage professionnel</h3>
+                        <p>Pour toutes vos occasions spéciales : mariages, soirées, événements</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-img">
+                        <i class="fas fa-spa"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Soin visage & corps</h3>
+                        <p>Traitements personnalisés pour une peau éclatante et saine</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-img">
+                        <i class="fas fa-cut"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Coiffure</h3>
+                        <p>Coupes, colorations, brushings et coiffures pour événements</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-img">
+                        <i class="fas fa-hand-sparkles"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Onglerie</h3>
+                        <p>Manucure, pédicure, pose de gel et nail art créatif</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- PAGE À PROPOS -->
+   
+<div id="about" class="page-content">
+    <section style="padding-top: 8rem;">
+        <h2 class="section-title">À propos de nous</h2>
+        <div class="about-content">
+            <div class="about-img-1"></div>
+            <div class="about-text">
+                <h2>PALOMA BEAUTY</h2>
+                <p>PALOMA BEAUTY est un salon de beauté professionnel spécialisé dans les soins du visage, le maquillage, la coiffure et les soins du corps. Notre mission est de révéler votre beauté naturelle grâce à des techniques modernes et des produits haut de gamme.</p>
+                            <p>Fondé avec passion et dévouement, notre salon s'engage à offrir une expérience unique à chaque cliente. Nous croyons que chaque personne mérite de se sentir belle et confiante.</p>
+                    <p>Notre équipe d'esthéticiennes certifiées possède une expertise reconnue et une formation continue pour vous garantir des prestations de qualité supérieure.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="avantages">
+        <h2 class="section-title">Notre équipe</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <p>Nos esthéticiennes sont diplômées et formées aux dernières techniques de beauté et de bien-être. Elles suivent régulièrement des formations pour rester à la pointe des tendances.</p>
+                 <p>Avec plus de 10 ans d'expérience cumulée, notre équipe est reconnue pour son professionnalisme, son écoute et sa capacité à créer des looks personnalisés qui subliment chaque cliente.</p>
+            </div>
+            <div class="about-img-2"></div>
+        </div>
+    </section>
+</div>
+
+
+    <!-- PAGE SERVICES -->
+    <div id="services" class="page-content">
+        <section style="padding-top: 8rem;">
+            <h2 class="section-title">Nos Services détaillés</h2>
+        </section>
+
+        <section class="services-detail">
+            <div style="max-width: 1200px; margin: 0 auto; padding: 0 5%;">
+                <div class="service-category">
+                    <h3><i class="fas fa-paint-brush"></i> Maquillage</h3>
+                    <ul class="service-list">
+                        <li>
+                            <span>Maquillage soirée</span>
+                            <span class="service-price">400 MAD</span>
+                        </li>
+                        <li>
+                            <span>Maquillage mariée (essai inclus)</span>
+                            <span class="service-price">800 MAD</span>
+                        </li>
+                        <li>
+                            <span>Maquillage simple</span>
+                            <span class="service-price">200 MAD</span>
+                        </li>
+                        <li>
+                            <span>Maquillage permanent</span>
+                            <span class="service-price">Sur devis</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="service-category">
+                    <h3><i class="fas fa-hand-sparkles"></i> Onglerie</h3>
+                    <ul class="service-list">
+                        <li>
+                            <span>Pose gel (mains)</span>
+                            <span class="service-price">150 MAD</span>
+                        </li>
+                        <li>
+                            <span>Manucure classique</span>
+                            <span class="service-price">80 MAD</span>
+                        </li>
+                        <li>
+                            <span>Pédicure complète</span>
+                            <span class="service-price">120 MAD</span>
+                        </li>
+                        <li>
+                            <span>Nail art (par ongle)</span>
+                            <span class="service-price">20 MAD</span>
+                        </li>
+                        <li>
+                            <span>Remplissage gel</span>
+                            <span class="service-price">100 MAD</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="service-category">
+                    <h3><i class="fas fa-spa"></i> Soins visage</h3>
+                    <ul class="service-list">
+                        <li>
+                            <span>Nettoyage profond du visage</span>
+                            <span class="service-price">250 MAD</span>
+                        </li>
+                        <li>
+                            <span>Hydratation intense</span>
+                            <span class="service-price">300 MAD</span>
+                        </li>
+                        <li>
+                            <span>Soin anti-âge</span>
+                            <span class="service-price">400 MAD</span>
+                        </li>
+                        <li>
+                            <span>Masque facial</span>
+                            <span class="service-price">150 MAD</span>
+                        </li>
+                        <li>
+                            <span>Épilation visage</span>
+                            <span class="service-price">100 MAD</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="service-category">
+                    <h3><i class="fas fa-cut"></i> Coiffure</h3>
+                    <ul class="service-list">
+                        <li>
+                            <span>Coupe femme</span>
+                            <span class="service-price">150 MAD</span>
+                        </li>
+                        <li>
+                            <span>Brushing</span>
+                            <span class="service-price">100 MAD</span>
+                        </li>
+                        <li>
+                            <span>Chignons mariée</span>
+                            <span class="service-price">500 MAD</span>
+                        </li>
+                        <li>
+                            <span>Coloration complète</span>
+                            <span class="service-price">400 MAD</span>
+                        </li>
+                        <li>
+                            <span>Mèches/Balayage</span>
+                            <span class="service-price">600 MAD</span>
+                        </li>
+                        <li>
+                            <span>Lissage brésilien</span>
+                            <span class="service-price">800 MAD</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- PAGE GALERIE -->
+    <div id="gallery" class="page-content">
+        <section style="padding-top: 8rem;">
+            <h2 class="section-title">Notre Galerie</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item-1">
+                    
+                </div>
+                <div class="gallery-item-2">
+                    
+                </div>
+                <div class="gallery-item-3">
+                   
+                </div>
+                <div class="gallery-item-4">
+                   
+                </div>
+                <div class="gallery-item-5">
+                   
+                </div>
+                <div class="gallery-item-6">
+                  
+                </div>
+                <div class="gallery-item-7">
+                   
+                </div>
+                <div class="gallery-item-8">
+                   
+                </div>
+                <div class="gallery-item-9">
+                    
+                </div>
+            </div>
+            <p style="text-align: center; margin-top: 3rem; color: #666;">
+                <i class="fas fa-info-circle"></i> Nos réalisations : avant/après maquillage, poses d'ongles, coiffures événementielles
+            </p>
+        </section>
+    </div>
+
+    <!-- PAGE CONTACT -->
+    <div id="contact" class="page-content">
+        <section style="padding-top: 8rem;">
+            <h2 class="section-title">Contactez-nous</h2>
+            <div class="contact-container">
+                <form>
+                    <div class="form-group">
+                        <label for="nom">Nom complet *</label>
+                        <input type="text" id="nom" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="tel">Téléphone *</label>
+                        <input type="tel" id="tel" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="service">Service souhaité</label>
+                        <select id="service">
+                            <option>Maquillage</option>
+                            <option>Onglerie</option>
+                            <option>Soins visage</option>
+                            <option>Coiffure</option>
+                            <option>Autre</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" rows="5"></textarea>
+                    </div>
+                    <button type="submit" class="btn">Envoyer la demande</button>
+                </form>
+                
+                <div class="contact-info">
+                    <h3>Informations du salon</h3>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <strong>Adresse</strong><br>
+                            OFPPT ISTA roche noires,salle 8, Casablanca, Maroc
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <strong>Heures d'ouverture</strong><br>
+                            Lun - Sam : 9h00 - 20h00<br>
+                            Dimanche : 10h00 - 18h00
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <strong>Téléphone</strong><br>
+                            +212 6XX-XXXXXX
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-whatsapp"></i>
+                        <div>
+                            <strong>WhatsApp</strong><br>
+                            +212 6XX-XXXXXX
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <strong>Email</strong><br>
+                            contact@palomabeauty.ma
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <h3>PALOMA BEAUTY</h3>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-tiktok"></i></a>
+            </div>
+            <p>&copy; 2025 PALOMA BEAUTY. Tous droits réservés.</p>
+            <p style="font-size: 0.9rem; margin-top: 1rem;">
+                <a href="#" style="color: var(--or-rose); text-decoration: none;">Mentions légales</a> | 
+                <a href="#" style="color: var(--or-rose); text-decoration: none;">Politique de confidentialité</a>
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        function showPage(pageId) {
+            // Cacher toutes les pages
+            document.querySelectorAll('.page-content').forEach(page => {
+                page.classList.remove('active');
+            });
+            
+            // Afficher la page demandée
+            document.getElementById(pageId).classList.add('active');
+            
+            // Scroll vers le haut
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Gestion du formulaire
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Merci pour votre demande ! Nous vous contacterons bientôt.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
